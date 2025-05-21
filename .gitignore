@@ -1,7 +1,6 @@
 .idea
 .python-version
-secret.json
-poetry.lock
+config/secret.json
 .DS_Store
 __pycache__/
 migrations/

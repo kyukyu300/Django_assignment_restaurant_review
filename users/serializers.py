@@ -13,8 +13,12 @@ class UserSerializer(serializers.ModelSerializer):
         password = validated_data.pop('password', None)
         if password is None:
             raise serializers.ValidationError('비밀번호가 필요합니다.')
-        user = User.objects.create_user(password=password, **validated_data)
+
+        user = User(**validated_data)
+        user.set_password(password)
+        user.save()
         return user
+
 
 class UserDetailSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
