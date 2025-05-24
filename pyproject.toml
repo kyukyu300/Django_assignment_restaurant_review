@@ -1,24 +1,25 @@
-[project]
-name = "django-assignment-restaurant-review"
+[tool.poetry]
+name = "Django_assignment_restaurant_review"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "kyukyu300",email = "kyujin1252@gmail.com"}
-]
+authors = ["kyukyu300 <kyujin1252@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "django (>=5.2.1,<6.0.0)",
-    "djangorestframework (>=3.16.0,<4.0.0)",
-    "django-extensions (>=4.1,<5.0)",
-    "django-cleanup (>=9.0.0,<10.0.0)",
-    "djangorestframework-simplejwt (>=5.5.0,<6.0.0)",
-    "drf-yasg (>=1.21.10,<2.0.0)",
-    "mysqlclient (>=2.2.7,<3.0.0)",
-    "pymysql (>=1.1.1,<2.0.0)"
-]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.7"
+django-extensions = "^3.2.3"
+mysqlclient = "^2.2.4"
+pillow = "^10.4.0"
+django-cleanup = "^8.1.0"
+djangorestframework = "^3.15.2"
+djangorestframework-simplejwt = "^5.3.1"
+drf-yasg = "^1.21.7"
+setuptools = "^72.1.0"
+django-storages = "^1.14.4"
+boto3 = "^1.34.159"
 
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

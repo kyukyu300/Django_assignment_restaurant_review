@@ -5,4 +5,4 @@ config/secret.json
 __pycache__/
 migrations/
 db.sqlite3
-settings.py
+config/settings/settings.py
